@@ -52,7 +52,8 @@ static const uint8_t TEXT_SENSOR_MAX_LEN = 8;
 class PylontechComponent : public PollingComponent, public uart::UARTDevice {
   
   PYLONTECH_SENSOR(systeme_is, pwrsys, float)
-  
+  PYLONTECH_TEXT_SENSOR(last_pwrsys, pwrsys)
+
  public:
   PylontechComponent();
 

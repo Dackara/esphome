@@ -111,7 +111,7 @@ void PylontechComponent::loop() {
     switch (this->used_polling_commands_[this->last_polling_command_].identifier) {
       case POLLING_pwrsys:
         ESP_LOGD(TAG, "Decode pwrsys");
-        sscanf(tmp, "(System is %s", &l.value_systeme_is);                              // NOLINT
+        sscanf(tmp, "(System is %s", &value_systeme_is_);                              // NOLINT
         if (this->last_pwrsys_) {
           this->last_pwrsys_->publish_state(tmp);
         }
